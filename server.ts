@@ -9,6 +9,9 @@ const fs = require('fs');
 const path = require('path');
 import {provideModuleMap} from '@nguniversal/module-map-ngfactory-loader';
 enableProdMode();
+const dotenv = require('dotenv');
+dotenv.config();
+
 const PORT = process.env.PORT || 8000;
 
 // Provide support for window on the server
@@ -41,7 +44,8 @@ try {
       bootstrap: AppServerModuleNgFactory,
       providers: [
         provideModuleMap(LAZY_MODULE_MAP),
-        { provide: 'REQUEST', useFactory: () => options.req, deps: [] }
+        { provide: 'REQUEST', useFactory: () => options.req, deps: [] },
+        { provide: 'CDN_URL', useFactory: () => process.env.CDN_URL, deps: [] }
       ]
     });
     engine(_, options, callback);
@@ -61,13 +65,17 @@ app.set('view cache', true);
 app.use('/', express.static('dist/browser', { index: false, maxAge: 30 * 86400000 }));
 
 // All regular routes use the Universal engine
-app.get('*', (req, res) => {
+app.get('', (req, res) => {
     res.render('index', {
         req: req,
         res: res,
         preboot: true
       });
   });
+
+app.get('/env', (req, res) => {
+  res.json(process.env);
+})
   
 app.listen(PORT,() => {
   console.log(`we are serving the site for you at http://localhost:${PORT}!`);
