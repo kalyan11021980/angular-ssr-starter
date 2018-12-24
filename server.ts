@@ -7,10 +7,12 @@ import * as express from 'express';
 const {AppServerModuleNgFactory, LAZY_MODULE_MAP} = require('./dist/server/main');
 const fs = require('fs');
 const path = require('path');
+const filterEnv = require('filter-env');
 import {provideModuleMap} from '@nguniversal/module-map-ngfactory-loader';
 enableProdMode();
 const dotenv = require('dotenv');
 dotenv.config();
+const config = filterEnv(/(BB_\w+)/, {json: true, freeze: true});
 
 const PORT = process.env.PORT || 8000;
 
@@ -45,7 +47,7 @@ try {
       providers: [
         provideModuleMap(LAZY_MODULE_MAP),
         { provide: 'REQUEST', useFactory: () => options.req, deps: [] },
-        { provide: 'CDN_URL', useFactory: () => process.env.CDN_URL, deps: [] }
+        { provide: 'CONFIG', useFactory: () => config, deps: [] }
       ]
     });
     engine(_, options, callback);
