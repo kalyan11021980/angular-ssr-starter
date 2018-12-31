@@ -14,7 +14,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const config = filterEnv(/(BB_\w+)/, {json: true, freeze: true});
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.BB_PORT || 8000;
 
 // Provide support for window on the server
 const domino = require('domino');
