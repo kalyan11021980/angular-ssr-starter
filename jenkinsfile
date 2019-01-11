@@ -1,7 +1,5 @@
 // This shows a simple example of how to archive the build output artifacts.
 node {
-    stages {
-
         stage('Checkout SCM'){
             steps {
                 git branch: 'SP2', url: 'git@github.com:kalyan11021980/angular-ssr-starter.git'
@@ -24,9 +22,4 @@ node {
                 sh "pm2 restart all"
             }
         }
-    }
-    
-    
-    // Archive the build output artifacts.
-    // archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
 }
