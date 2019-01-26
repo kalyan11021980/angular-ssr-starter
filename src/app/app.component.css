@@ -1,4 +1,11 @@
 body { overflow: hidden; }
+#error {
+  width: 100%;
+  padding:20px;
+  background: rgb(210, 10, 10);
+  font-size: 16px;
+  color:#fff;
+}
 #icon-mic { 
   font-family: "fontello";
   border-radius: 50%;

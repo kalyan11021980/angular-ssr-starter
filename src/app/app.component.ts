@@ -1,7 +1,9 @@
-import { Component, Injector, Inject, PLATFORM_ID, Renderer2, ViewChild } from '@angular/core';
+import { Component, Injector, OnInit, Inject, PLATFORM_ID, Renderer2, ViewChild } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 const configKey = makeStateKey('CONFIG');
+import {TestService} from './services/test-service';
+import * as Sentry from "@sentry/browser";
 declare var webkitSpeechRecognition: any;
 
 @Component({
@@ -9,12 +11,15 @@ declare var webkitSpeechRecognition: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public title : string;
+  public errorText: string;
+  public errBlock: Boolean;
   @ViewChild('gSearch') formSearch;
   @ViewChild('searchKey') hiddenSearchHandler;
   constructor(
     private injector: Injector,
+    public srv: TestService,
     private state : TransferState,
     @Inject(PLATFORM_ID) private platformid: Object,
     private renderer: Renderer2
@@ -26,9 +31,20 @@ export class AppComponent {
   }
 }
 
+ngOnInit(){
+  this.srv.getData().subscribe((data) => {
+    console.log('data returned from server', data);
+  }, error => {
+    this.errBlock = true;
+    this.errorText = error.message;
+  }
+  );
+}
+
 
 public voiceSearch(){
-  if('webkitSpeechRecognition' in window){
+  try{
+    if('webkitSpeechRecognition' in window){
       const vSearch = new webkitSpeechRecognition();
       vSearch.continuous = false;
       vSearch.interimresults = false;
@@ -52,6 +68,10 @@ public voiceSearch(){
   } else {
     console.log(this.state.get(configKey, undefined as any));
     }
+  } catch(e){
+    Sentry.captureException(e);
+  }
+  
 }
 }
 
