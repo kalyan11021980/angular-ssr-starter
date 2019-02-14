@@ -4,6 +4,7 @@ import { enableProdMode } from '@angular/core';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as compression from 'compression';
 import * as express from 'express';
+const logger = require('nguniversal-logger/logger');
 const {AppServerModuleNgFactory, LAZY_MODULE_MAP} = require('./dist/server/main');
 const fs = require('fs');
 const path = require('path');
@@ -38,6 +39,7 @@ global['CSS'] = null;
 global['Prism'] = null;
 
 const app = express();
+logger.log('error', 'there is sonme issue defining app engine ');
 
 // Config renderer
 try {
@@ -53,7 +55,7 @@ try {
     engine(_, options, callback);
   });
 } catch (e) {
-  console.log('error', 'there is sonme issue defining app engine ' + e);
+  logger.log('error', 'there is sonme issue defining app engine ' + e);
 }
 
 // configs
@@ -61,6 +63,10 @@ app.enable('etag');
 
 // Middleware
 app.use(compression());
+app.use(require('morgan')('combined', {stream: logger.stream}));
+
+
+
 app.set('view engine', 'html');
 app.set('views', 'dist/browser');
 app.set('view cache', true);

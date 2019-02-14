@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
 
 ngOnInit(){
   this.srv.getData().subscribe((data) => {
-    console.log('data returned from server', data);
+    // console.log('data returned from server', data);
   }, error => {
     this.errBlock = true;
     this.errorText = error.message;

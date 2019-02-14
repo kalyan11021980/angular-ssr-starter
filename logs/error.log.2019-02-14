@@ -1,0 +1,3 @@
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"message":"::1 - - [14/Feb/2019:12:51:32 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [14/Feb/2019:12:51:32 +0000] \"GET /main.06bbfd52a0cfb7515d20.js HTTP/1.1\" 200 - \"http://localhost:9000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}

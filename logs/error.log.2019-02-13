@@ -1,0 +1,20 @@
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"message":"::1 - - [Wed, 13 Feb 2019 07:46:12 GMT] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [Wed, 13 Feb 2019 07:46:12 GMT] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:9000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"message":"\u001b[0mGET / \u001b[36m304 \u001b[0m202.565 ms - -\u001b[0m\n","level":"info"}
+{"message":"\u001b[0mGET /favicon.ico \u001b[32m200 \u001b[0m7.124 ms - -\u001b[0m\n","level":"info"}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"message":"::1 - - [13/Feb/2019:07:52:00 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [13/Feb/2019:07:52:00 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:9000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"level":"error","message":"there is sonme issue defining app engine "}
+{"message":"::1 - - [13/Feb/2019:07:53:40 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [13/Feb/2019:07:53:40 +0000] \"GET /main.8ac9f3d598c935fd6eb5.js HTTP/1.1\" 200 - \"http://localhost:9000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [13/Feb/2019:07:53:40 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:9000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [13/Feb/2019:07:54:35 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [13/Feb/2019:07:54:35 +0000] \"GET /favicon.ico HTTP/1.1\" 200 - \"http://localhost:9000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36\"\n","level":"info"}

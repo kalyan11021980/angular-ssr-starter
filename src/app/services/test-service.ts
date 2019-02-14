@@ -7,7 +7,7 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
   providedIn: "root"
 })
 export class TestService {
-  private apiurl = "https://jsonplaceholder.typicode.com/postsgg";
+  private apiurl = "https://jsonplaceholder.typicode.com/posts";
   constructor(private http: HttpClient) {}
 
   getData(): Observable<any> {
