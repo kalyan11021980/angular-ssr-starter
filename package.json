@@ -30,7 +30,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.15.2",
     "filter-env": "^1.1.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
