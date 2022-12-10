@@ -28,7 +28,7 @@
     "@nguniversal/express-engine": "^10.1.0",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "filter-env": "^1.1.2",
     "node-fetch": "^2.6.1",
     "rxjs": "~6.6.0",
